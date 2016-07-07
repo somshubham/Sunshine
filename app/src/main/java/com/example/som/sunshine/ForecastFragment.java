@@ -42,7 +42,7 @@ import java.util.List;
  */
 public class ForecastFragment extends Fragment {
 
-//private ArrayAdapter<String> mForecastAdapter;
+private ArrayAdapter<String> mForecastAdapter;
 
 
 
@@ -264,7 +264,8 @@ public class ForecastFragment extends Fragment {
                         .appendQueryParameter(FORMAT_PARAM, format)
                         .appendQueryParameter(UNITS_PARAM, units)
                         .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
-                        .appendQueryParameter(APPID_PARAM, apikey1)
+             /*   BuildConfig.OPEN_WEATHER_MAP_API_KEY*/
+                        .appendQueryParameter(APPID_PARAM,BuildConfig.OPEN_WEATHER_MAP_API_KEY)
                         .build();
 
                 URL url = new URL(builtUri.toString());
@@ -353,12 +354,12 @@ public class ForecastFragment extends Fragment {
 
             return null;
         }
-
-      /*  @Override
+ @Override
                protected void onPostExecute(String[] result) {
                      if (result != null) {
                              mForecastAdapter.clear();
                           for(String dayForecastStr : result) {
+
                                       mForecastAdapter.add(dayForecastStr);
                                 }
                              // New data is back from the server.  Hooray!
@@ -371,7 +372,7 @@ public class ForecastFragment extends Fragment {
 
 
 
-*/
+
 
 
     }
