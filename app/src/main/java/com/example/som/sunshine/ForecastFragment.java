@@ -90,13 +90,13 @@ private ArrayAdapter<String> mForecastAdapter;
                 "Sun 6/29 - Sunny - 20/7"
         };
         List<String> weekForecast = new ArrayList<String>(Arrays.asList(data));
-        ArrayAdapter<String> mForecatAddapter = new ArrayAdapter<String>(getActivity(),
+          mForecastAdapter = new ArrayAdapter<String>(getActivity(),
                 R.layout.list_item_forecast, R.id.list_item_forecast_textview, weekForecast);
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
         ListView listView =  (ListView) rootView.findViewById(R.id.listview_forecast);
-        listView.setAdapter(mForecatAddapter);
+        listView.setAdapter(mForecastAdapter);
         return rootView;
 
     }
@@ -259,13 +259,13 @@ private ArrayAdapter<String> mForecastAdapter;
                 final String DAYS_PARAM = "cnt";
                 final String APPID_PARAM = "APPID";
 
+
                 Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
                         .appendQueryParameter(QUERY_PARAM, params[0])
                         .appendQueryParameter(FORMAT_PARAM, format)
                         .appendQueryParameter(UNITS_PARAM, units)
                         .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
-             /*   BuildConfig.OPEN_WEATHER_MAP_API_KEY*/
-                        .appendQueryParameter(APPID_PARAM,BuildConfig.OPEN_WEATHER_MAP_API_KEY)
+                        .appendQueryParameter(APPID_PARAM, BuildConfig.OPEN_WEATHER_MAP_API_KEY)
                         .build();
 
                 URL url = new URL(builtUri.toString());
@@ -354,6 +354,8 @@ private ArrayAdapter<String> mForecastAdapter;
 
             return null;
         }
+
+
  @Override
                protected void onPostExecute(String[] result) {
                      if (result != null) {
