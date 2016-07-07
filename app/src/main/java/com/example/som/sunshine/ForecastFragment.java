@@ -245,7 +245,7 @@ private ArrayAdapter<String> mForecastAdapter;
                 // Construct the URL for the OpenWeatherMap query
                 // Possible parameters are avaiable at OWM's forecast API page, at
                 // http://openweathermap.org/API#forecast
-                String apikey1="10c11416b973aaa54d7e8613753ee9c9";
+                
               /*  a    String baseUrl = "http://api.openweathermap.org/data/2.5/forecast/daily?q=94043&mode=json&units=metric&cnt=7";
                 String apiKey = "&APPID=" + apikey1;
                 URL url = new URL(baseUrl.concat(apiKey));*/
