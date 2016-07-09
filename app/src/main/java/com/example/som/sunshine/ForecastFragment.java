@@ -1,5 +1,6 @@
 package com.example.som.sunshine;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
@@ -104,6 +105,10 @@ private ArrayAdapter<String> mForecastAdapter;
 
                 String forecast = mForecastAdapter.getItem(position);
                 Toast.makeText(getActivity(), forecast, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity(), DetailActivity.class)
+                                           .putExtra(Intent.EXTRA_TEXT, forecast);
+                           startActivity(intent);
 
 
 
