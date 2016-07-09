@@ -3,10 +3,15 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/sunshine_blue</item>
+        <item name="colorPrimaryDark">@color/sunshine_dark_blue</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/toolbaricon</item>
     </style>
+
+
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -17,4 +22,32 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="SettingsTheme" parent="AppTheme">
+
+
+        <item name="colorPrimary">@color/sunshine_blue</item>
+        <item name="colorPrimaryDark">@color/sunshine_dark_blue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/toolbaricon</item>
+
+    </style>
+<!--
+    <style name="ActionBar.PreLollipop.Sunshine.NoTitle"
+    parent="AppTheme" >
+    <item name="colorPrimary">@color/sunshine_blue</item>
+    <item name="colorPrimaryDark">@color/sunshine_dark_blue</item>
+    <item name="background">@color/sunshine_blue</item>
+    <item name="android:height">200dp</item>
+</style>-->
+
+
+
+
+
+   <!-- android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay"-->
 </resources>

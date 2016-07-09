@@ -73,6 +73,7 @@ private ArrayAdapter<String> mForecastAdapter;
         {
             FetchWeatherTask weatherTask = new FetchWeatherTask();
             weatherTask.execute("94043");
+
             return true;
         }
         return super.onOptionsItemSelected(item);
